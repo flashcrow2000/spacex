@@ -1,8 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import flightsReducer from "../features/flightsList/flightsSlice";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    flights: flightsReducer,
   },
 });

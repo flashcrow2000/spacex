@@ -1,39 +1,44 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("assets/font/BrandonGrotesque-Bold.woff2") format("woff2"),
+    url("assets/font/BrandonGrotesque-Bold.woff") format("woff"),
+    url("assets/font/BrandonGrotesque-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("assets/font/BrandonGrotesque-Regular.woff2") format("woff2"),
+    url("assets/font/BrandonGrotesque-Regular.woff") format("woff"),
+    url("assets/font/BrandonGrotesque-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("assets/font/BrandonGrotesque-RegularItalic.woff2") format("woff2"),
+    url("assets/font/BrandonGrotesque-RegularItalic.woff") format("woff"),
+    url("assets/font/BrandonGrotesque-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("assets/font/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("assets/font/BrandonGrotesque-Black.woff") format("woff"),
+    url("assets/font/BrandonGrotesque-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("assets/font/BrandonGrotesque-Medium.woff2") format("woff2"),
+    url("assets/font/BrandonGrotesque-Medium.woff") format("woff"),
+    url("assets/font/BrandonGrotesque-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
