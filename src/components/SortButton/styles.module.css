@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  color: white;
+  font-family: Brandon Grotesque;
+  background-color: #215184;
+  padding: 8px;
+  align-self: center;
+  margin-left: 8px;
+}
+
+.icon {
+  height: 18px;
+  width: 14px;
+  margin-left: 8px;
+}

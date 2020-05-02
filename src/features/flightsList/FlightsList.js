@@ -7,8 +7,10 @@ import {
   selectFlightsList,
 } from "./flightsSlice";
 import FlightDetails from "../../components/FlightDetails/FlightDetails";
-import sortIcon from "../../assets/icons/sort@3x.png";
 import filterIcon from "../../assets/icons/select@3x.png";
+import FilterButton from "../../components/FilterButton/FilterButton";
+import SortButton from "../../components/SortButton/SortButton";
+import styles from "./styles.module.css";
 
 const FlightsList = () => {
   const dispatch = useDispatch();
@@ -17,6 +19,13 @@ const FlightsList = () => {
   const flightsList = useSelector(selectFlightsList);
   const [flights, setFlights] = useState([]);
   const [sorting, setSorting] = useState(1);
+  const [years, setYears] = useState([]);
+  function rangeArray(start, end) {
+    // creates an Array containing values from start to end
+    return Array(end - start + 1)
+      .fill()
+      .map((_, idx) => start + idx);
+  }
   useEffect(() => {
     // called only once, initial loading of spacex flights
     dispatch(loadFlights());
@@ -27,20 +36,26 @@ const FlightsList = () => {
     setFlights(
       sorting > 0 ? [...flightsList] : [...flightsList.slice().reverse()]
     );
+    if (flightsList.length) {
+      const firstFlightYear = new Date(flightsList[0].date).getFullYear();
+      const lastScheduledFlightYear = new Date(
+        flightsList[flightsList.length - 1].date
+      ).getFullYear();
+      setYears(rangeArray(firstFlightYear, lastScheduledFlightYear));
+    }
   }, [flightsList, sorting]);
   return (
     <div>
-      <div>
-        <div
-          onClick={() => {
+      <div className={styles.buttonContainer}>
+        <FilterButton years={years} />
+        <SortButton
+          sorting={sorting}
+          clickHandler={() => {
             setSorting(sorting * -1);
           }}
-        >
-          <div>Sort {sorting > 0 ? "descending" : "ascending"}</div>
-          <img src={sortIcon} />
-        </div>
+        />
       </div>
-      <div>
+      <div style={{ margin: "8px 0 0 0" }}>
         {flights.map((flight) => (
           <FlightDetails
             key={flight.index}
