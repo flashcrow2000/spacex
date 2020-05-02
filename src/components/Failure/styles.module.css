@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.text {
+  font-family: Brandon Grotesque;
+  font-size: 32px;
+  font-weight: 500;
+  max-width: 650px;
+  text-align: center;
+}

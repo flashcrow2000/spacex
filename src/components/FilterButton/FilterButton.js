@@ -32,7 +32,7 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-const FilterButton = ({ years }) => {
+const FilterButton = ({ years, selectedYears, setSelectedYears }) => {
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
   const MenuProps = {
@@ -44,7 +44,7 @@ const FilterButton = ({ years }) => {
     },
   };
 
-  const [selectedYears, setSelectedYears] = React.useState([]);
+  //const [selectedYears, setSelectedYears] = React.useState([]);
   const handleChange = (event) => {
     setSelectedYears(event.target.value);
   };

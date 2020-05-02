@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  justify-content: space-between;
+  width: 130px;
   color: white;
   font-family: Brandon Grotesque;
   background-color: #215184;

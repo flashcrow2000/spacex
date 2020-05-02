@@ -1,16 +1,12 @@
 import React from "react";
+import rocket from "../../assets/images/launch-home.png";
+import styles from "./style.module.css";
 
 const ImagePanel = () => {
   return (
     <div>
-      <div
-        style={{
-          width: "533px",
-          height: "695px",
-          backgroundColor: "lightblue",
-        }}
-      >
-        SpaceX rocket png
+      <div className={styles.image}>
+        <img src={rocket} />
       </div>
     </div>
   );
